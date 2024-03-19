@@ -34,7 +34,7 @@ const { error, pending, data } = await useFetch('https://api.github.com/users/Al
 
 // TODO: add description to repos
 const repositories = computed(() => {
-    return data.value.filter(repo => repo.description)
+    return data.value
         .sort((a, b) => b.stargazers_count - a.stargazers_count)
 })
 
